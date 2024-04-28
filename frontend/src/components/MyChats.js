@@ -17,7 +17,6 @@ const MyChats = ({ fetchAgain }) => {
   const toast = useToast();
 
   const fetchChats = async () => {
-    // console.log(user._id);
     try {
       const config = {
         headers: {
@@ -29,7 +28,7 @@ const MyChats = ({ fetchAgain }) => {
       setChats(data);
     } catch (error) {
       toast({
-        title: "Error Occured!",
+        title: "Error Occurred!",
         description: "Failed to Load the chats",
         status: "error",
         duration: 5000,
@@ -51,11 +50,12 @@ const MyChats = ({ fetchAgain }) => {
       flexDir="column"
       alignItems="center"
       p={3}
-      bg="white"
+      bg="linear-gradient(to bottom, #f9ce34, #ee2a7b, #6228d7)"
       w={{ base: "100%", md: "31%" }}
       borderRadius="lg"
       borderWidth="1px"
     >
+      {/* User section header */}
       <Box
         pb={3}
         px={3}
@@ -66,7 +66,7 @@ const MyChats = ({ fetchAgain }) => {
         justifyContent="space-between"
         alignItems="center"
       >
-        My Chats
+        Meri Chats
         <GroupChatModal>
           <Button
             d="flex"
@@ -77,11 +77,12 @@ const MyChats = ({ fetchAgain }) => {
           </Button>
         </GroupChatModal>
       </Box>
+      {/* User section */}
       <Box
         d="flex"
         flexDir="column"
         p={3}
-        bg="#F8F8F8"
+        bg="linear-gradient(to bottom, #f9ce34, #ee2a7b, #6228d7)"
         w="100%"
         h="100%"
         borderRadius="lg"
@@ -93,7 +94,7 @@ const MyChats = ({ fetchAgain }) => {
               <Box
                 onClick={() => setSelectedChat(chat)}
                 cursor="pointer"
-                bg={selectedChat === chat ? "#38B2AC" : "#E8E8E8"}
+                bg={selectedChat === chat ? "#38b26f" : "#E8E8E8"}
                 color={selectedChat === chat ? "white" : "black"}
                 px={3}
                 py={2}

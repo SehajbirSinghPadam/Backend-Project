@@ -26,7 +26,12 @@ const ProfileModal = ({ user, children }) => {
       )}
       <Modal size="lg" onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
-        <ModalContent h="410px">
+        <ModalContent
+          h="410px"
+          style={{
+            background: "linear-gradient(to right, #A1C4FD, #C2E9FB)",
+          }}
+        >
           <ModalHeader
             fontSize="40px"
             fontFamily="Work sans"
@@ -52,6 +57,8 @@ const ProfileModal = ({ user, children }) => {
               fontSize={{ base: "28px", md: "30px" }}
               fontFamily="Work sans"
             >
+              Name: {user.name}
+              <br />
               Email: {user.email}
             </Text>
           </ModalBody>
